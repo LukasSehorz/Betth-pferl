@@ -1,0 +1,125 @@
+"use client";
+
+import { motion, useScroll, useTransform } from "framer-motion";
+import React, { useRef } from "react";
+
+const AnimationSection = () => {
+  const scrollSection = useRef(null);
+  const { scrollYProgress } = useScroll({
+    target: scrollSection,
+    offset: ["start 55%", "start start"],
+  });
+  const height = useTransform(scrollYProgress, [0, 1], ["0%", "100%"]);
+  return React.createElement(
+    "div",
+    {
+      className:
+        "absolute left-8 right-auto top-[10%] h-3/4 w-0.5 bg-black/15 md:left-[2.4375rem]",
+    },
+    React.createElement(motion.div, {
+      ref: scrollSection,
+      className: "bg-black",
+      style: { height },
+    }),
+  );
+};
+
+export function Layout121() {
+  return (
+    <section id="relume" className="px-[5%] py-16 md:py-24 lg:py-28">
+      <div className="container">
+        <div className="grid grid-cols-1 items-start gap-y-8 md:grid-cols-2 md:gap-x-12 lg:gap-x-20">
+          <div>
+            <p className="mb-3 font-semibold md:mb-4">Geschichte</p>
+            <h2 className="rb-5 mb-5 text-5xl font-bold md:mb-6 md:text-7xl lg:text-8xl">
+              Wie alles begann — und warum es bis heute währt
+            </h2>
+          </div>
+          <div className="relative">
+            <AnimationSection />
+            <div className="grid grid-cols-[max-content_1fr] gap-x-6 lg:gap-x-10">
+              <div className="relative flex flex-col items-center justify-start py-10">
+                <div className="relative z-10 -mt-4 bg-white px-2 py-4 md:px-4">
+                  <img
+                    src="https://d22po4pjz3o32e.cloudfront.net/relume-icon.svg"
+                    alt="Relume icon 1"
+                    className="size-12"
+                  />
+                </div>
+              </div>
+              <div className="py-10">
+                <h6 className="mb-3 text-md font-bold leading-[1.4] md:mb-4 md:text-xl">
+                  Die Gründung
+                </h6>
+                <p>
+                  Mit Leidenschaft für italienische Handwerkskunst entstand die
+                  erste Kollektion am See.
+                </p>
+              </div>
+            </div>
+            <div className="grid grid-cols-[max-content_1fr] gap-x-6 lg:gap-x-10">
+              <div className="relative flex flex-col items-center justify-start py-10">
+                <div className="relative z-10 -mt-4 bg-white px-2 py-4 md:px-4">
+                  <img
+                    src="https://d22po4pjz3o32e.cloudfront.net/relume-icon.svg"
+                    alt="Relume icon 2"
+                    className="size-12"
+                  />
+                </div>
+              </div>
+              <div className="py-10">
+                <h6 className="mb-3 text-md font-bold leading-[1.4] md:mb-4 md:text-xl">
+                  Italienische Wurzeln
+                </h6>
+                <p>
+                  Direkte Partnerschaften mit Manufakturen in Piemont und
+                  Venetien prägen unser Sortiment.
+                </p>
+              </div>
+            </div>
+            <div className="grid grid-cols-[max-content_1fr] gap-x-6 lg:gap-x-10">
+              <div className="relative flex flex-col items-center justify-start py-10">
+                <div className="relative z-10 -mt-4 bg-white px-2 py-4 md:px-4">
+                  <img
+                    src="https://d22po4pjz3o32e.cloudfront.net/relume-icon.svg"
+                    alt="Relume icon 3"
+                    className="size-12"
+                  />
+                </div>
+              </div>
+              <div className="py-10">
+                <h6 className="mb-3 text-md font-bold leading-[1.4] md:mb-4 md:text-xl">
+                  Persönliche Beratung
+                </h6>
+                <p>
+                  Jeder Besuch ist ein Gespräch — Zeit für das Wesentliche, ohne
+                  Hektik.
+                </p>
+              </div>
+            </div>
+            <div className="grid grid-cols-[max-content_1fr] gap-x-6 lg:gap-x-10">
+              <div className="relative flex flex-col items-center justify-start py-10">
+                <div className="relative z-10 -mt-4 bg-white px-2 py-4 md:px-4">
+                  <img
+                    src="https://d22po4pjz3o32e.cloudfront.net/relume-icon.svg"
+                    alt="Relume icon 4"
+                    className="size-12"
+                  />
+                </div>
+              </div>
+              <div className="py-10">
+                <h6 className="mb-3 text-md font-bold leading-[1.4] md:mb-4 md:text-xl">
+                  Heute und morgen
+                </h6>
+                <p>
+                  Wir wachsen langsam, bewusst und immer mit Respekt vor dem,
+                  was war.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+}
