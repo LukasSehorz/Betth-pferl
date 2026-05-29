@@ -6,12 +6,10 @@ export function IntroScreen({ onDone }) {
   const [fading, setFading] = useState(false);
 
   useEffect(() => {
-    // After line 1 sweep (1.6s) + short hold
     const t1 = setTimeout(() => {
       setShowRule(true);
       setTimeout(() => {
         setShowLine2(true);
-        // After line 2 sweep (2.2s) + hold, fade out
         setTimeout(() => {
           setFading(true);
           setTimeout(onDone, 900);
@@ -32,6 +30,7 @@ export function IntroScreen({ onDone }) {
       flexDirection: "column",
       alignItems: "center",
       justifyContent: "center",
+      padding: "0 2rem",
       opacity: fading ? 0 : 1,
       transition: "opacity 0.9s ease",
       pointerEvents: fading ? "none" : "all",
@@ -45,7 +44,7 @@ export function IntroScreen({ onDone }) {
         color: "#7A1528",
         letterSpacing: "0.1em",
         textAlign: "center",
-        animation: "revealLine 1.6s cubic-bezier(0.4, 0, 0.2, 1) both",
+        animation: "revealFade 1.6s cubic-bezier(0.4, 0, 0.2, 1) both",
       }}>
         Das Betthupferl Traunstein
       </h1>
@@ -67,16 +66,17 @@ export function IntroScreen({ onDone }) {
         color: "#7A1528",
         letterSpacing: "0.08em",
         textAlign: "center",
-        clipPath: showLine2 ? "inset(0 0% 0 0)" : "inset(0 100% 0 0)",
-        transition: showLine2 ? "clip-path 2.2s cubic-bezier(0.4, 0, 0.2, 1)" : "none",
+        opacity: showLine2 ? 1 : 0,
+        transform: showLine2 ? "translateY(0)" : "translateY(8px)",
+        transition: showLine2 ? "opacity 1.4s ease, transform 1.4s ease" : "none",
       }}>
         Ein Ort der Eleganz im Herzen Traunsteins
       </p>
 
       <style>{`
-        @keyframes revealLine {
-          from { clip-path: inset(0 100% 0 0); }
-          to   { clip-path: inset(0 0% 0 0); }
+        @keyframes revealFade {
+          from { opacity: 0; transform: translateY(12px); }
+          to   { opacity: 1; transform: translateY(0); }
         }
       `}</style>
 

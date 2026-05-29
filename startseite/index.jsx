@@ -9,12 +9,14 @@ import { Footer } from "./components/Footer";
 import { IntroScreen } from "./components/IntroScreen";
 
 export default function Page() {
-  const [showIntro, setShowIntro] = useState(() => !sessionStorage.getItem("intro_shown"));
+  const [showIntro, setShowIntro] = useState(() => {
+    try { return !sessionStorage.getItem("intro_shown"); } catch { return true; }
+  });
 
   return (
     <div>
       {showIntro && (
-        <IntroScreen onDone={() => { sessionStorage.setItem("intro_shown", "1"); setShowIntro(false); }} />
+        <IntroScreen onDone={() => { try { sessionStorage.setItem("intro_shown", "1"); } catch {} setShowIntro(false); }} />
       )}
       <HeroCollage />
       <ProductSection />
