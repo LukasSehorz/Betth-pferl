@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { Footer } from "../startseite/components/Footer";
+import { PageNavbar } from "./PageNavbar";
 
 const colors = [
   { hex: "#f0e8de", name: "Creme" },
@@ -106,6 +107,7 @@ export default function LookDetailPage({ lookTitle, modelImg, products }) {
 
   return (
     <div style={{ minHeight: "100vh", background: "#f5f1eb", fontFamily: "'Cormorant Garamond', serif" }}>
+      <PageNavbar />
       <div style={{ display: "flex", minHeight: "100vh" }}>
 
         {/* Left: model image - sticky */}

@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { Footer } from "../startseite/components/Footer";
+import { PageNavbar } from "../shared/PageNavbar";
 
 const colors = [
   { hex: "#f0e8de", name: "Creme" },
@@ -26,21 +27,7 @@ export default function ProduktSeite({ name, material, preis, img1, img2 }) {
   return (
     <div style={{ minHeight: "100vh", background: "#f5f1eb", fontFamily: "'Cormorant Garamond', serif", fontSize: "14px" }}>
 
-      {/* Navbar */}
-      <div style={{ background: "#fff", borderBottom: "1px solid #e8e0d8", padding: "0 2.5rem" }}>
-        <div style={{ display: "grid", gridTemplateColumns: "1fr auto 1fr", alignItems: "center", padding: "0.9rem 0 0.7rem" }}>
-          <a href="/" style={{ fontSize: "0.92rem", color: "#555", textDecoration: "none", letterSpacing: "0.06em", fontFamily: "'Cormorant Garamond', serif" }}>← Zurück</a>
-          <a href="/" style={{ textDecoration: "none", color: "#1a1a1a", fontFamily: "'Bodoni Moda', serif", fontSize: "1.4rem", fontWeight: 700, letterSpacing: "0.06em", textAlign: "center" }}>
-            Betthupferl
-          </a>
-          <div />
-        </div>
-        <div style={{ display: "flex", justifyContent: "center", gap: "2.5rem", padding: "0.5rem 0 0.9rem", borderTop: "1px solid #f0e8e0" }}>
-          {["Damen", "Herren", "Angebote", "Marken", "Boutique", "Journal"].map(link => (
-            <a key={link} href={`/${link.toLowerCase()}`} style={{ textDecoration: "none", color: "#333", fontSize: "1rem", letterSpacing: "0.06em", fontFamily: "'Cormorant Garamond', serif", fontWeight: 500 }}>{link}</a>
-          ))}
-        </div>
-      </div>
+      <PageNavbar />
 
       {/* Main */}
       <div style={{ display: "flex", height: "calc(100vh - 105px)" }}>

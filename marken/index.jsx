@@ -1,6 +1,7 @@
 import React from "react";
 import { Footer } from "../startseite/components/Footer";
 import { useIsMobile } from "../shared/useIsMobile";
+import { PageNavbar } from "../shared/PageNavbar";
 
 const rows = [
   [
@@ -38,12 +39,14 @@ export default function Marken() {
   return (
     <div style={{ minHeight: "100vh", background: "#f5f1eb", fontFamily: "'Cormorant Garamond', serif" }}>
 
+      <PageNavbar />
+
       <style>{`
         @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;1,400&family=Montserrat:wght@200;300;400&family=Raleway:wght@200;300;400&family=Poppins:wght@300;400&family=Open+Sans:wght@300;400&family=Quicksand:wght@400;500&display=swap');
       `}</style>
 
       {/* Header */}
-      <div style={{ textAlign: "center", padding: isMobile ? "5rem 1.5rem 3rem" : "9rem 2rem 5rem" }}>
+      <div style={{ textAlign: "center", padding: isMobile ? "2.5rem 1.5rem 3rem" : "4rem 2rem 5rem" }}>
         <p style={{ margin: "0 0 0.8rem", fontSize: "0.65rem", letterSpacing: "0.28em", textTransform: "uppercase", color: "#9b6a4a" }}>
           Unsere Partner
         </p>

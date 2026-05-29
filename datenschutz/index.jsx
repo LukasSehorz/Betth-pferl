@@ -1,5 +1,6 @@
 import React from "react";
 import { Footer } from "../startseite/components/Footer";
+import { PageNavbar } from "../shared/PageNavbar";
 
 const Section = ({ title, children }) => (
   <div style={{ marginBottom: "2.5rem" }}>
@@ -16,7 +17,9 @@ export default function Datenschutz() {
   return (
     <div style={{ minHeight: "100vh", background: "#f5f1eb", fontFamily: "'Cormorant Garamond', serif" }}>
 
-      <div style={{ maxWidth: "760px", margin: "0 auto", padding: "9rem 2rem 7rem" }}>
+      <PageNavbar />
+
+      <div style={{ maxWidth: "760px", margin: "0 auto", padding: "3rem 2rem 7rem" }}>
 
         <p style={{ margin: "0 0 0.8rem", fontSize: "0.65rem", letterSpacing: "0.28em", textTransform: "uppercase", color: "#9b6a4a" }}>
           Rechtliches

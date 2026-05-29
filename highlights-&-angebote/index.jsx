@@ -2,6 +2,7 @@ import React from "react";
 import { useNavigate } from "react-router-dom";
 import { Footer } from "../startseite/components/Footer";
 import { useFadeUp } from "../shared/useGsap";
+import { PageNavbar } from "../shared/PageNavbar";
 
 const angebote = [
   {
@@ -164,8 +165,10 @@ export default function Angebote() {
   return (
     <div style={{ background: "#f5f1eb", fontFamily: "'Cormorant Garamond', serif" }}>
 
+      <PageNavbar />
+
       {/* Title */}
-      <div style={{ textAlign: "center", padding: "8rem 0 5rem" }}>
+      <div style={{ textAlign: "center", padding: "3rem 0 5rem" }}>
         <p style={{ margin: "0 0 0.8rem", fontSize: "0.72rem", letterSpacing: "0.18em", textTransform: "uppercase", color: "#9b6a4a" }}>
           Limitierte Angebote
         </p>

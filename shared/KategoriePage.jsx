@@ -2,6 +2,7 @@ import React, { useState, useRef } from "react";
 import { useNavigate } from "react-router-dom";
 import { Footer } from "../startseite/components/Footer";
 import { useIsMobile } from "./useIsMobile";
+import { PageNavbar } from "./PageNavbar";
 
 const INITIAL_VISIBLE = 8;
 const LOAD_MORE = 8;
@@ -27,8 +28,10 @@ export default function KategoriePage({ title, products, bannerImgs = [] }) {
   return (
     <div style={{ minHeight: "100vh", background: "#f5f1eb", fontFamily: "'Cormorant Garamond', serif" }}>
 
+      <PageNavbar />
+
       {/* Title */}
-      <div style={{ textAlign: "center", padding: isMobile ? "5rem 0 2.5rem" : "8rem 0 4.5rem" }}>
+      <div style={{ textAlign: "center", padding: isMobile ? "2.5rem 0 2.5rem" : "4rem 0 4.5rem" }}>
         <h1 style={{ margin: 0, fontFamily: "'Cormorant Garamond', serif", fontWeight: 400, fontSize: "2.6rem", color: "#1a1a1a", letterSpacing: "0.02em" }}>
           {title}
         </h1>

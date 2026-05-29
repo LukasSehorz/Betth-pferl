@@ -2,6 +2,7 @@ import React from "react";
 import { Footer } from "../startseite/components/Footer";
 import { useFadeUp, useStaggerFadeUp } from "../shared/useGsap";
 import { useIsMobile } from "../shared/useIsMobile";
+import { PageNavbar } from "../shared/PageNavbar";
 
 const galleryImages = [
   { img: "/images/bild31.jpg", tall: true },
@@ -21,8 +22,10 @@ export default function Boutique() {
   return (
     <div style={{ background: "#f5f1eb", fontFamily: "'Cormorant Garamond', serif" }}>
 
+      <PageNavbar />
+
       {/* Intro */}
-      <div ref={introRef} style={{ display: "flex", flexDirection: "column", alignItems: "center", padding: isMobile ? "4rem 1.5rem 2.5rem" : "6rem 0", maxWidth: "560px", margin: "0 auto", textAlign: "center" }}>
+      <div ref={introRef} style={{ display: "flex", flexDirection: "column", alignItems: "center", padding: isMobile ? "2rem 1.5rem 2.5rem" : "4rem 0", maxWidth: "560px", margin: "0 auto", textAlign: "center" }}>
         <p style={{ margin: "0 0 1.2rem", fontSize: "0.72rem", letterSpacing: "0.16em", textTransform: "uppercase", color: "#9b6a4a" }}>
           Unsere Welt
         </p>

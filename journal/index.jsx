@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { Footer } from "../startseite/components/Footer";
 import { useFadeUp } from "../shared/useGsap";
 import { useIsMobile } from "../shared/useIsMobile";
+import { PageNavbar } from "../shared/PageNavbar";
 
 const beitraege = [
   {
@@ -142,8 +143,10 @@ export default function Journal() {
   return (
     <div style={{ background: "#f5f1eb", fontFamily: "'Cormorant Garamond', serif", minHeight: "100vh" }}>
 
+      <PageNavbar />
+
       {/* Header */}
-      <div ref={headerRef} style={{ textAlign: "center", padding: isMobile ? "5rem 1.5rem 3rem" : "8rem 0 5rem" }}>
+      <div ref={headerRef} style={{ textAlign: "center", padding: isMobile ? "2.5rem 1.5rem 3rem" : "4rem 0 5rem" }}>
         <p style={{ margin: "0 0 0.8rem", fontSize: "0.72rem", letterSpacing: "0.18em", textTransform: "uppercase", color: "#9b6a4a" }}>
           Geschichten & Einblicke
         </p>

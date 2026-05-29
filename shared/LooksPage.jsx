@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { Footer } from "../startseite/components/Footer";
+import { PageNavbar } from "./PageNavbar";
 
 function LookCard({ look, onClick }) {
   const [hovered, setHovered] = useState(false);
@@ -72,8 +73,10 @@ export default function LooksPage() {
   return (
     <div style={{ minHeight: "100vh", background: "#f5f1eb", fontFamily: "'Cormorant Garamond', serif" }}>
 
+      <PageNavbar />
+
       {/* Title */}
-      <div style={{ textAlign: "center", padding: "5rem 0 3rem" }}>
+      <div style={{ textAlign: "center", padding: "2.5rem 0 3rem" }}>
         <h1 style={{ margin: 0, fontFamily: "'Cormorant Garamond', serif", fontWeight: 400, fontSize: "2rem", color: "#1a1a1a", letterSpacing: "0.01em" }}>
           {title}
         </h1>
