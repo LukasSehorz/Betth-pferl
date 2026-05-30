@@ -11,9 +11,9 @@ const products = [
   { name: "Nachtwäsche",  material: "PIP Studio",   img: "/images/bild47.png", route: "/nachtwaesche" },
   { name: "Nachtwäsche",  material: "PIP Studio",   img: "/images/bild48.png", route: "/nachtwaesche" },
   { name: "Nachtwäsche",  material: "PIP Studio",   img: "/images/bild49.png", route: "/nachtwaesche" },
-  { name: "Bademode",     material: "CHANTELLE",    img: "/images/bild50.png", route: "/bademode" },
-  { name: "Bademode",     material: "CHANTELLE",    img: "/images/bild51.png", route: "/bademode" },
-  { name: "Bademode",     material: "CHANTELLE",    img: "/images/bild52.png", route: "/bademode" },
+  { name: "Bademode",     material: "Anita",    img: "/images/bild50.png", route: "/bademode" },
+  { name: "Bademode",     material: "Anita",    img: "/images/bild51.png", route: "/bademode" },
+  { name: "Bademode",     material: "Anita",    img: "/images/bild52.png", route: "/bademode" },
 ];
 
 export default function DamenAlle() {

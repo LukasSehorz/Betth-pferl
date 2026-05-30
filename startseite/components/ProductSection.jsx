@@ -9,7 +9,7 @@ const damenProducts = [
   { name: "Dessous-Set",   material: "NINA VON C",  img: "/images/bild41.jpg", route: "/dessous-lingerie" },
   { name: "Unterwäsche",   material: "MARIE JO",    img: "/images/bild44.jpg", route: "/unterwaesche" },
   { name: "Nachtwäsche",   material: "PIP Studio",  img: "/images/bild47.png", route: "/nachtwaesche" },
-  { name: "Bademode",      material: "CHANTELLE",   img: "/images/bild50.png", route: "/bademode" },
+  { name: "Bademode",      material: "Anita",   img: "/images/bild50.png", route: "/bademode" },
 ];
 
 const herrenProducts = [
