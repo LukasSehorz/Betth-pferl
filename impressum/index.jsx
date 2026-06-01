@@ -31,6 +31,7 @@ export default function Impressum() {
 
         <Section title="Angaben gemäß § 5 TMG">
           <p style={{ margin: 0 }}>
+            Michaela Szegedi<br />
             Betthupferl Traunstein<br />
             Stadtpl. 11<br />
             83278 Traunstein<br />
@@ -47,7 +48,7 @@ export default function Impressum() {
 
         <Section title="Verantwortlich für den Inhalt nach § 18 Abs. 2 MStV">
           <p style={{ margin: 0 }}>
-            Betthupferl Traunstein<br />
+            Michaela Szegedi<br />
             Stadtpl. 11<br />
             83278 Traunstein
           </p>
