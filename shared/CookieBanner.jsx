@@ -101,8 +101,7 @@ export function CookieBanner() {
                   color: "#1a1a1a",
                   lineHeight: 1.65,
                 }}>
-                  Diese Website verwendet Cookies und externe Dienste (Google Fonts, Google Maps).
-                  Notwendige Dienste sind immer aktiv. Alle anderen benötigen Ihre Einwilligung.
+                  Diese Website verwendet lokalen Speicher für technisch notwendige Funktionen sowie Google Maps auf der Boutique-Seite. Tracking oder Werbung findet nicht statt.
                 </p>
                 <button
                   onClick={() => setShowDetails(d => !d)}
@@ -196,10 +195,10 @@ export function CookieBanner() {
                     desc: "Technisch erforderliche Funktionen wie Sitzungsspeicher für die Navigation. Keine personenbezogenen Daten werden gespeichert.",
                   },
                   {
-                    title: "Externe Dienste",
+                    title: "Google Maps",
                     badge: "Einwilligung erforderlich",
                     badgeColor: "#9b6a4a",
-                    desc: "Google Fonts (Schriftarten) und Google Maps (Kartenansicht auf der Boutique-Seite). Dabei wird Ihre IP-Adresse an Google übertragen.",
+                    desc: "Kartenansicht auf der Boutique-Seite (Google Maps). Nur nach Ihrer Einwilligung geladen. Dabei wird Ihre IP-Adresse an Google übertragen. Schriftarten sind lokal eingebunden – kein externer Aufruf.",
                   },
                 ].map(cat => (
                   <div key={cat.title} style={{
